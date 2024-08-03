@@ -4,42 +4,42 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
-    {
-        languageOptions: {
-            globals: {
-                ...globals.browser,
-                ...globals.es2021,
-            },
-            parserOptions: {
-                ecmaVersion: 'latest',
-                sourceType: 'module',
-            },
-        },
-        rules: {
-            'prettier/prettier': 'error',
-        },
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.es2021,
+      },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
     },
-    pluginJs.configs.recommended,
-    {
-        plugins: {
-            prettier: prettierPlugin,
-        },
-        rules: {
-            ...eslintConfigPrettier.rules,
-        },
+    rules: {
+      'prettier/prettier': 'error',
     },
-    {
-        files: ['.eslintrc.{js,cjs}'],
-        languageOptions: {
-            globals: {
-                ...globals.node,
-            },
-            parserOptions: {
-                sourceType: 'script',
-            },
-        },
+  },
+  pluginJs.configs.recommended,
+  {
+    plugins: {
+      prettier: prettierPlugin,
     },
-    {
-        ignores: ['node_modules', 'dist'],
+    rules: {
+      ...eslintConfigPrettier.rules,
     },
+  },
+  {
+    files: ['.eslintrc.{js,cjs}'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
+  },
+  {
+    ignores: ['node_modules', 'dist'],
+  },
 ];

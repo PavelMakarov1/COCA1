@@ -17,7 +17,9 @@
     "sass": "^1.77.8",
     "stylelint": "^16.8.1",
     "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
     "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.4.1",
     "vite": "^5.3.4"
   }
 }
