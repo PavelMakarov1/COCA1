@@ -7,7 +7,7 @@
   }
 
   @include mobile {
-    min-height: calc(100dvh - 128px);
+    min-height: calc(100dvh - 109px);
   }
 
   &::before {
@@ -44,7 +44,7 @@
       width: 325px;
       height: 325px;
     }
-    
+
     @include small-tablet {
       top: 20px;
       left: 40px;
@@ -77,7 +77,7 @@
   }
 
   &__left {
-    max-width: 595px;
+    max-width: 617px;
   }
 
   &__title {
@@ -110,6 +110,12 @@
 
   &__subtitle {
     margin-bottom: 69px;
+
+    & br {
+      @include mini-desktop {
+        display: none;
+      }
+    }
   }
 
   &__form {
@@ -240,10 +246,11 @@
     }
 
     &-body {
-      &-th {
+      &-td {
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
+        white-space: nowrap;
         color: #fff;
 
         &:nth-child(1) {
