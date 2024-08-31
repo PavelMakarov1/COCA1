@@ -49,6 +49,9 @@
   --z-index-2: 2;
   --z-index-3: 3;
   --z-index-4: 4;
+
+  // Swiper
+  --swiper-pagination-color:var(--neutral-color-100);
 }
 
 [data-theme='dark'] {
@@ -66,4 +69,7 @@
 
   // overview colors
   --overview-bg-color: #18181d;
+
+  // Swiper
+  --swiper-pagination-color:var(--neutral-color-100);
 }
