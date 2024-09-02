@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
-import { Autoplay, Pagination } from 'swiper/modules';
-Swiper.use([Autoplay, Pagination]);
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export const useInsightSlider = () => {
     new Swiper('.insight__slider', {
+        modules: [Pagination],
         slidesPerView: 'auto',
         spaceBetween: 32,
         loop: true,
@@ -70,4 +70,18 @@ export const usePartnersSlider = () => {
 
     window.addEventListener('resize', checkWidth);
     checkWidth();
+};
+
+export const useTestimonialsSlider = () => {
+    new Swiper('.testimonials__slider', {
+        modules: [Navigation],
+        slidesPerView: 'auto',
+        spaceBetween: 22,
+        loop: true,
+
+        navigation: {
+            nextEl: '.testimonials__btn--prev',
+            prevEl: '.testimonials__btn--next',
+        },
+    });
 };
