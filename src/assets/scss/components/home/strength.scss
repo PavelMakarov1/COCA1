@@ -13,6 +13,10 @@
     &__list {
         @include flex-align-center;
 
+        @include mobile {
+            margin-bottom: 50px;
+        }
+
         @include tablet {
             gap: 82px;
             flex-wrap: wrap;
@@ -92,12 +96,6 @@
     &__list,
     &__img {
         margin-bottom: 80px;
-    }
-
-    &__list {
-        @include mobile {
-            margin-bottom: 50px;
-        }
     }
 
     &__img {
