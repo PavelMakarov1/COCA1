@@ -4,6 +4,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import '../assets/scss/main.scss';
+import './components/footer.js';
 
 // components
 import { useTheme } from './components/theme.js';
