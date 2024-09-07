@@ -26,7 +26,7 @@ export const usePartnersSlider = () => {
     let partnersSlider = null;
 
     function checkWidth() {
-        if (window.innerWidth <= 992) {
+        if (window.innerWidth <= 768) {
             if (!partnersSlider) {
                 initSwiper();
             }

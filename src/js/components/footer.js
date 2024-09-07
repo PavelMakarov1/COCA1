@@ -15,7 +15,7 @@ titles.forEach((item, index) => {
             activeContent.classList.remove('active');
             item.classList.remove('active');
             activeContent.style.maxHeight = 0;
-            item.closest('.accordian__inner').classList.remove('active');
+            item.closest('.footer__item').classList.remove('active');
         } else {
             contents.forEach((element, i) => {
                 if (i !== index) {
@@ -34,7 +34,7 @@ titles.forEach((item, index) => {
             item.classList.add('active');
             activeContent.classList.add('active');
             activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
-            item.closest('.accordian__inner').classList.add('active');
+            item.closest('.footer__item').classList.add('active');
         }
     });
 });
