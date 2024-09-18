@@ -1,0 +1,188 @@
+.hero {
+    padding: 95px 0 168px;
+
+    @include mobile {
+        padding-bottom: 70px;
+    }
+
+    &__container {
+        padding-right: 0;
+        max-width: 1440px;
+    }
+
+    &__top {
+        display: flex;
+        gap: 24px;
+        padding-bottom: 128px;
+
+        @include mobile {
+            padding-bottom: 80px;
+        }
+
+        &::before {
+            top: -216px;
+            left: -39px;
+        }
+
+        &::after {
+            bottom: -320px;
+        }
+
+        &-title {
+            padding-bottom: 53px;
+            font-weight: 700;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color-100);
+        }
+
+        &-text {
+            max-width: 674px;
+            font-weight: 600;
+            line-height: 131%;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
+        }
+
+        &-line {
+            margin-top: 17px;
+            border: 1px solid var(--neutral-color-100);
+            width: 76px;
+            height: 0;
+
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        &-item {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        &-tabs {
+            &-nav {
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 90px;
+
+                @include mobile {
+                    padding-bottom: 40px;
+                }
+
+                &-item {
+                    border: none;
+                    padding: 10px 20px;
+                    font-weight: 500;
+                    line-height: 150%;
+                    color: var(--neutral-color-150);
+                    cursor: pointer;
+
+                    @include mobile {
+                        padding: 7px 10px;
+                    }
+
+                    &.active {
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 150%;
+                        text-decoration: underline;
+                        color: var(--neutral-color-100);
+                        text-decoration-skip-ink: none;
+                    }
+                }
+            }
+        }
+
+        &-swiper {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            &-slide {
+                position: relative;
+                height: 100%;
+                max-width: 515px;
+
+                &-signature {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 16px 0 24px;
+                    font-weight: 400;
+                    line-height: 150%;
+                    color: var(--neutral-color-150);
+
+                    @include tablet {
+                        display: inline-block;
+                    }
+                }
+
+                &-title {
+                    padding-bottom: 16px;
+                    max-width: 328px;
+                    font-weight: 700;
+                    line-height: 125%;
+                    letter-spacing: -0.03em;
+                    color: var(--neutral-color-100);
+                }
+
+                &-title-2 {
+                    max-width: 488px;
+                }
+
+                &-text {
+                    max-width: 328px;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 150%;
+                    color: var(--neutral-color-150);
+
+                    @include tablet {
+                        font-size: 18px;
+                    }
+
+                    @include mobile {
+                        font-size: 14px;
+                    }
+                }
+
+                &-text-2 {
+                    max-width: 488px;
+                }
+            }
+
+            &-pagination {
+                &#about-pag {
+                    position: relative;
+                    top: -220px;
+                    left: 46.5%;
+                    width: 80px;
+                    height: 20;
+
+                    @media (max-width: 1155px) {
+                        top: -245px;
+                    }
+
+                    @include small-tablet {
+                        top: -250px;
+                    }
+
+                    @include mobile {
+                        top: -204px;
+                    }
+
+                    @media (max-width: 504px) {
+                        top: -220px;
+                    }
+                }
+            }
+        }
+    }
+}

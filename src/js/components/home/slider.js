@@ -88,3 +88,36 @@ export const useTestimonialsSlider = () => {
         },
     });
 };
+
+export const useTabSwiper = () => {
+    new Swiper('.hero__content-swiper', {
+        modules: [Pagination],
+        slidesPerView: 2.4,
+        spaceBetween: 32,
+        centeredSlides: false,
+
+        pagination: {
+            el: '.hero__content-swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2.4,
+                spaceBetween: 32,
+                centeredSlides: false,
+            },
+            576: {
+                slidesPerView: 1.9,
+                spaceBetween: 20,
+            },
+            380: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 1.3,
+                spaceBetween: 20,
+            },
+        },
+    });
+};
