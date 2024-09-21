@@ -6,8 +6,12 @@
     }
 
     &__container {
-        padding-right: 0;
-        max-width: 1440px;
+        margin-right: calc(10% - -42px);
+        max-width: 1320px;
+
+        @include small-desktop {
+            margin-right: auto;
+        }
     }
 
     &__top {
@@ -109,7 +113,7 @@
             &-slide {
                 position: relative;
                 height: 100%;
-                max-width: 515px;
+                
 
                 &-signature {
                     display: flex;
@@ -166,7 +170,7 @@
                     width: 80px;
                     height: 20;
 
-                    @media (max-width: 1155px) {
+                    @media (max-width: 1170px) {
                         top: -245px;
                     }
 

@@ -92,7 +92,7 @@ export const useTestimonialsSlider = () => {
 export const useTabSwiper = () => {
     new Swiper('.hero__content-swiper', {
         modules: [Pagination],
-        slidesPerView: 2.4,
+        slidesPerView: 2.7,
         spaceBetween: 32,
         centeredSlides: false,
 
@@ -101,12 +101,12 @@ export const useTabSwiper = () => {
             clickable: true,
         },
         breakpoints: {
-            768: {
+            769: {
                 slidesPerView: 2.4,
                 spaceBetween: 32,
                 centeredSlides: false,
             },
-            576: {
+            577: {
                 slidesPerView: 1.9,
                 spaceBetween: 20,
             },
@@ -115,7 +115,39 @@ export const useTabSwiper = () => {
                 spaceBetween: 20,
             },
             320: {
-                slidesPerView: 1.3,
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+        },
+    });
+};
+
+export const useSwiperArticles = () => {
+    new Swiper('.articles__swiper', {
+        modules: [Navigation],
+        slidesPerView: 3,
+        spaceBetween: 32,
+
+        navigation: {
+            nextEl: '.articles__swiper-button-prev',
+            prevEl: '.articles__swiper-button-next',
+        },
+
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+            },
+            993: {
+                slidesPerView: 2.3,
+                spaceBetween: 20,
+            },
+            577: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 1.1,
                 spaceBetween: 20,
             },
         },
