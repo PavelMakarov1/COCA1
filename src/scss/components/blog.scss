@@ -1,0 +1,149 @@
+.blog {
+    padding: 80px 0 160px;
+
+    @include mobile {
+        padding: 80px 0 70px;
+
+    }
+
+    &__container {
+        max-width: 940px;
+    }
+
+    &__title {
+        padding-bottom: 80px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+    }
+
+    &__head {
+        @include flex-justify-between;
+        align-items: center;
+
+        @include mobile {
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__author {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        padding-bottom: 24px;
+
+        @include mobile {
+            padding-bottom: 10px;
+        }
+
+        &-img {
+            padding-bottom: 80px;
+
+            @include mobile {
+                padding-bottom: 50px;
+            }
+        }
+
+        &-name {
+            padding-bottom: 4px;
+        }
+    }
+
+    &__body {
+        &-text {
+            font-weight: 400;
+            line-height: 178%;
+            color: var(--neutral-color-100);
+
+            &:not(:last-child) {
+                padding-bottom: 56px;
+            }
+        }
+
+        &-title {
+            padding-bottom: 24px;
+            font-weight: 600;
+            line-height: 120%;
+            color: var(--neutral-color-140);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        gap: 48px;
+        padding-top: 56px;
+
+        @include mobile {
+            display: inline-block;
+        }
+
+        &-img {
+            max-width: 200px;
+            max-height: 200px;
+
+            @include mobile {
+                padding-bottom: 15px;
+            }
+        }
+
+        &-socials {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            padding-bottom: 14px;
+
+            &-img {
+                filter: var(--svg-filter);
+
+                @include small-mobile {
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            @include small-tablet {
+                gap: 10px;
+            }
+
+            @include small-mobile {
+                display: inline-block;
+            }
+        }
+
+        &-text {
+            padding-bottom: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            color: var(--neutral-color-150);
+
+            @include small-mobile {
+                padding-top: 10px;
+            }
+        }
+
+        &-author {
+            padding-bottom: 16px;
+            font-weight: 600;
+            line-height: 131%;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
+        }
+
+        &-post {
+            padding-bottom: 16px;
+            font-weight: 500;
+            line-height: 162%;
+            color: var(--neutral-color-150);
+        }
+
+        &-info {
+            max-width: 650px;
+            font-weight: 400;
+            line-height: 178%;
+            color: var(--neutral-color-100);
+        }
+    }
+}

@@ -129,8 +129,8 @@ export const useSwiperArticles = () => {
         spaceBetween: 32,
 
         navigation: {
-            nextEl: '.articles__swiper-button-prev',
-            prevEl: '.articles__swiper-button-next',
+            nextEl: '.slides__button-prev',
+            prevEl: '.slides__button-next',
         },
 
         breakpoints: {
@@ -143,6 +143,82 @@ export const useSwiperArticles = () => {
                 spaceBetween: 20,
             },
             577: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+        },
+    });
+};
+
+export const useSwiperOverview = () => {
+    new Swiper('.hero__swiper', {
+        modules: [Navigation],
+        slidesPerView: 2.5,
+        spaceBetween: 32,
+
+        navigation: {
+            nextEl: '.hero__swiper-button-prev',
+            prevEl: '.hero__swiper-button-next',
+        },
+
+        breakpoints: {
+            1201: {
+                slidesPerView: 2.5,
+                spaceBetween: 32,
+            },
+            993: {
+                slidesPerView: 2.3,
+                spaceBetween: 20,
+            },
+            767: {
+                slidesPerView: 1.9,
+                spaceBetween: 20,
+            },
+            577: {
+                slidesPerView: 1.6,
+                spaceBetween: 20,
+            },
+            441: {
+                slidesPerView: 1.3,
+                spaceBetween: 20,
+            },
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+            },
+        },
+    });
+};
+
+export const useSwiperOverviewBot = () => {
+    new Swiper('.team__swiper', {
+        modules: [Navigation],
+        slidesPerView: 3,
+        spaceBetween: 32,
+
+        navigation: {
+            nextEl: '.team__swiper-button-prev',
+            prevEl: '.team__swiper-button-next',
+        },
+
+        breakpoints: {
+            993: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+            },
+            769: {
+                slidesPerView: 2.3,
+                spaceBetween: 20,
+            },
+            621: {
+                slidesPerView: 1.9,
+                spaceBetween: 20,
+            },
+            451: {
                 slidesPerView: 1.5,
                 spaceBetween: 20,
             },

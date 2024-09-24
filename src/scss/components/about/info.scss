@@ -1,0 +1,61 @@
+.info {
+    padding: 120px 0;
+    background-color: #1d1e25;
+
+    @include small-tablet {
+        padding: 0;
+    }
+
+    @include mobile {
+        display: flex;
+        padding-bottom: 50px;
+    }
+
+    &__container {
+        display: flex;
+        gap: 32px;
+
+        @include mobile {
+            display: inline-block;
+        }
+    }
+
+    &__inner {
+        vertical-align: inherit;
+
+        &-AWS,
+        &-research {
+            padding-bottom: 159px;
+        }
+
+        @include mobile {
+            vertical-align: auto;
+            text-align: center;
+        }
+
+        &-AWS,
+        &-research,
+        &-layout,
+        &-webflow {
+            max-width: 584px;
+
+            @include mobile {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    &__title {
+        padding: 24px 0;
+        font-weight: 600;
+        line-height: 120%;
+        color: #fff;
+    }
+
+    &__text {
+        max-width: 511px;
+        font-weight: 500;
+        line-height: 178%;
+        color: #7e8492;
+    }
+}

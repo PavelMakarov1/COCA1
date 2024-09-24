@@ -3,7 +3,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
-import '../assets/scss/main.scss';
+import '/scss/main.scss';
 import './components/footer.js';
 
 // components

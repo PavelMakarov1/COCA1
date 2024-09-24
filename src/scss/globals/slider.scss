@@ -1,0 +1,42 @@
+.slides {
+    &__container {
+        margin-right: calc(10% - -42px);
+        max-width: 1320px;
+
+        @include small-desktop {
+            margin-right: auto;
+        }
+    }
+
+    &__button {
+        &-prev svg {
+            transform: rotate(180deg);
+        }
+
+        &-prev,
+        &-next {
+            border: 1px solid var(--neutral-color-40);
+            border-radius: 100px;
+            padding: 16px;
+            max-width: 50px;
+            max-height: 50px;
+            background-color: #fff;
+            transition: background var(--transition);
+            cursor: pointer;
+
+            & svg path {
+                fill: var(--neutral-color-160);
+            }
+
+            &:hover {
+                background-color: var(--neutral-color-170);
+                transition: background var(--transition);
+            }
+        }
+
+        &-arrow {
+            display: flex;
+            gap: 16px;
+        }
+    }
+}

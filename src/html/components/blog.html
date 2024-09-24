@@ -1,0 +1,97 @@
+<section class="blog">
+    <div class="container blog__container">
+        <h1 class="blog__title heading-h1">How we perform long-running tasks using AWS services</h1>
+        <div class="blog__head">
+            <div class="blog__author">
+                <img src="./assets/images/comment-author-1.jpg" alt="author" />
+                <div class="blog__author-text">
+                    <p class="blog__author-name text-p-medium">Renee Wells</p>
+                    <p class="blog__author-post text-p-default">Product Designer, Quotient</p>
+                </div>
+            </div>
+            <p class="blog_author-date text-p-medium">10 min read November 10, 2023</p>
+        </div>
+        <img
+            class="blog__author-img"
+            src="./assets/images/team-laptop.png"
+            alt="table and laptops"
+        />
+        <div class="blog__body">
+            <p class="blog__body-text text-p-medium">
+                Depending on the input, this can result in using a lot of processing power and time.
+                The whole process would take approximately 5 seconds to return a result to the
+                client. Keep in mind we’re talking about 1 item, a contact from a contact book.
+                After a while, a new requirement is added. Solution must support companies that
+                manage their contacts organized in files. We agreed to develop a web application
+                that would support upload of dataset files, like .csv. The new web application
+                should support third party integrations. Some of them are the ESP/CRM services, like
+                Mailchimp. User does not need to see the result immediately. System can later notify
+                the user about the result, when the process finishes. This information is the key
+                that we need to leverage on when developing our solution. So here’s how we did it.
+            </p>
+            <h3 class="blog__body-title heading-h3">Initial approach</h3>
+            <p class="blog__body-text text-p-medium">
+                Our initial approach went like this: The web application would read a .csv file
+                line-by-line and submit an array of entries to the backend REST API. Processing is
+                in real time, immediately after the user makes a request for the process to start,
+                he expects a result. Another approach is to apply vertical scaling to AWS
+                architecture. Meaning we used larger, more expensive instances that have more RAM
+                and processing power. This system worked well for smaller datasets, maybe up to 5k
+                entries, but for larger datasets multiple problems arose. This solution is prone to
+                failure due to long request time. Also, because of some 3rd party services that
+                aren’t optimized for large scale loads or they don’t have batch endpoints. 3rd party
+                services also tend to protect their architecture from making a huge bill on their
+                end. The whole process was done in real-time. The request can take a lot of time
+                hanging in there while the backend would do all the work and return the result to
+                the client. The request was limited to 300 seconds (at time of writing the article)
+                before AWS would cancel it… Also I need to mention that the user has to wait a few
+                minutes to see the results. They can’t use the app during the process, which makes
+                for a bad user experience.
+            </p>
+        </div>
+        <div class="blog__bottom">
+            <img class="blog__bottom-img" src="./assets/images/team-woman.png" width="200" height="200" alt="woman" />
+            <div class="blog__bottom-content">
+                <div class="blog__bottom-socials">
+                    <img
+                    class="blog__bottom-socials-img"
+                        src="./assets/icons/socials/blog-fb-icon.png"
+                        width="32"
+                        height="32"
+                        alt="Facebook"
+                    />
+                    <img
+                    class="blog__bottom-socials-img"
+                        src="./assets/icons/socials/blog-tw-icon.png"
+                        width="32"
+                        height="32"
+                        alt="Tweeter"
+                    />
+                    <img
+                    class="blog__bottom-socials-img"
+                        src="./assets/icons/socials/blog-in-icon.png"
+                        width="32"
+                        height="32"
+                        alt="In"
+                    />
+                    <img
+                    class="blog__bottom-socials-img"
+                        src="./assets/icons/socials/blog-inst-icon.png"
+                        width="32"
+                        height="32"
+                        alt="Instagram"
+                    />
+                    <p class="blog__bottom-socials-text">Share this article</p>
+                </div>
+                <p class="blog__bottom-text text-p-default">Written by</p>
+                <p class="blog__bottom-author heading-h5">Renee Wells</p>
+                <p class="blog__bottom-post text-p-default">Product Designer, Quotient</p>
+                <p class="blog__bottom-info text-p-medium">
+                    Skilled in React Native, iOS and backend, Toni has a demonstrated knowledge of
+                    the information technology and services industry, with plenty of hands-on
+                    experience to back it up.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

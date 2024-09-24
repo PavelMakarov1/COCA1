@@ -1,0 +1,117 @@
+.team {
+    &__container {
+        border-top: 1px solid var(--neutral-color-30);
+        padding-top: 160px;
+
+        @include small-tablet {
+            padding-top: 100px;
+        }
+    }
+
+    &__top {
+        &-title {
+            padding-bottom: 24px;
+            max-width: 880px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color-100);
+        }
+
+        &-text {
+            padding-bottom: 60px;
+            max-width: 534px;
+            font-weight: 500;
+            line-height: 178%;
+            color: var(--neutral-color-150);
+        }
+
+        &::before {
+            top: -220%;
+            left: -158px;
+        }
+
+        &-arrow {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__swiper {
+        &-inner {
+            @include flex-all-between;
+        }
+
+        &-name {
+            padding: 16px 0 8px;
+            font-weight: 600;
+            line-height: 150%;
+            color: var(--neutral-color-100);
+        }
+
+        &-text {
+            font-weight: 500;
+            line-height: 150%;
+            color: var(--neutral-color-150);
+        }
+
+        &-social {
+            @include flex-all-center;
+            gap: 8px;
+
+            & img {
+                filter: var(--svg-filter);
+            }
+        }
+    }
+
+    &__bottom {
+        @include flex-justify-between;
+        padding: 160px 0 100px;
+
+        @include mini-desktop {
+            display: inline-block;
+        }
+
+        @include mobile {
+            padding-bottom: 100px;
+        }
+
+        &-title {
+            max-width: 626px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color-100);
+
+            @include mini-desktop {
+                padding-bottom: 20px;
+                max-width: inherit;
+            }
+        }
+
+        &-content {
+            max-width: 506px;
+
+            @include mini-desktop {
+                max-width: inherit;
+            }
+
+            &-text {
+                padding-bottom: 24px;
+                font-weight: 500;
+                line-height: 178%;
+                color: var(--neutral-color-150);
+
+                @include mini-desktop {
+                    padding-bottom: 5px;
+                }
+            }
+
+            &-btn {
+                font-weight: 600;
+                line-height: 150%;
+                color: var(--neutral-color-140);
+            }
+        }
+    }
+}
