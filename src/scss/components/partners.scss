@@ -8,7 +8,7 @@
     &__container {
         @include flex-all-between;
         gap: 30px;
-        max-width: 1110px;
+        max-width: 1113px;
 
         @include small-tablet {
             flex-direction: column;

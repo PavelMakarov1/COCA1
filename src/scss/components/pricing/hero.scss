@@ -221,7 +221,7 @@
                 margin-right: 10px;
                 width: 20px;
                 height: 20px;
-                background: url('../assets/icons/pricing-tick-icon.svg');
+                background: url('../assets/icons/pricing-tick-Icon.svg');
                 transform: translateY(2px);
             }
 
@@ -238,7 +238,8 @@
                 color: var(--neutral-color-150);
 
                 &::before {
-                    background: url('../assets/icons/pricing-tick-inaccess-icon.svg');
+                    content: '';
+                    background: url('../assets/icons/pricing-tick-inaccess-Icon.svg');
                 }
             }
         }
