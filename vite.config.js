@@ -4,10 +4,12 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify'
 import injectHTML from 'vite-plugin-html-inject';
 export default defineConfig({
   root: './src',
+  base: '/COCA1/',
   server: {
     port: 3000,
     open: true,
   },
+  publicDir: './src/assets',
   build: {
     outDir: '../build',
     emptyOutDir: true,
